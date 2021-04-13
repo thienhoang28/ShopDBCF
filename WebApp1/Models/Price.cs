@@ -5,7 +5,8 @@ namespace Shop.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    
+    using WebApp1.Models;
+
     /// <summary>
     /// This is a special class.
     /// Because name of field is not follows EF convention for PK then we need some configuration

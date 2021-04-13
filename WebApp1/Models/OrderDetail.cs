@@ -2,7 +2,8 @@ namespace Shop.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using WebApp1.Models;
+
     public partial class OrderDetail
     {
         public long Id { get; set; }
