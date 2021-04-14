@@ -1,11 +1,10 @@
-namespace Shop.Models
+namespace WebApp1.Models
 {
-	using global::Shop.Models.Enums;
-	using System;
-    using System.Collections.Generic;
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using WebApp1.Models;
+    using System.Web.Script.Serialization;
+    using WebApp1.Models.Enums;
 
     /// <summary>
     /// This is a special class.
@@ -21,6 +20,7 @@ namespace Shop.Models
 
         public PriceType Type { get; set; }
 
+        [ScriptIgnore]
         [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
     }

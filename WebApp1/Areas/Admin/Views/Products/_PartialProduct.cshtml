@@ -1,0 +1,142 @@
+﻿@*@model WebApp1.Models.Product*@
+@model WebApp1.Models.ViewModels.ProductView
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.HiddenFor(model => model.Id)
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.CategoryId, "CategoryId", htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownList("CategoryId", null, "[--Select--]", htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.ModelCar, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.ModelCar, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ModelCar, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @*@Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })*@
+        @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<script>
+    CKEDITOR.replace("Description");
+</script>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.FeatureImage, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.FeatureImage))
+        {
+            <img src="@Server.UrlDecode( Model.FeatureImage)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Imglink1, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile1, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile1, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.Imglink1))
+        {
+            <img src="@Server.UrlDecode( Model.Imglink1)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Imglink2, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile2, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile2, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.Imglink2))
+        {
+            <img src="@Server.UrlDecode( Model.Imglink2)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Imglink3, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile3, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile3, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.Imglink3))
+        {
+            <img src="@Server.UrlDecode( Model.Imglink3)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Imglink4, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile4, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile4, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.Imglink4))
+        {
+            <img src="@Server.UrlDecode( Model.Imglink4)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Imglink5, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile5, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile5, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.Imglink5))
+        {
+            <img src="@Server.UrlDecode( Model.Imglink5)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EnumDropDownListFor(model => model.Status, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.PublishDate, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.PublishDate, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.PublishDate, "", new { @class = "text-danger" })
+    </div>
+</div>

@@ -1,4 +1,4 @@
-﻿@model Shop.Models.Category
+﻿@model WebApp1.Models.Category
 
 @{
     ViewBag.Title = "Edit";
@@ -19,10 +19,10 @@
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DisplayText, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Category_Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DisplayText, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DisplayText, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Category_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Category_Name, "", new { @class = "text-danger" })
             </div>
         </div>
 

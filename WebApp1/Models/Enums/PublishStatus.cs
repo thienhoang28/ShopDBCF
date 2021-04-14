@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Shop.Models
+namespace WebApp1.Models
 {
 	public enum PublishStatus
 	{

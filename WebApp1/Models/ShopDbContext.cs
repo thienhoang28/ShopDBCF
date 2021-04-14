@@ -1,5 +1,4 @@
-﻿using Shop.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace WebApp1.Models
         {
         }
 
-        public DbSet<Shop.Models.Shop> Shops { get; set; }
+        public DbSet<WebApp1.Models.Shop> Shops { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Price> Prices { get; set; }
         public DbSet<Order> Orders { get; set; }

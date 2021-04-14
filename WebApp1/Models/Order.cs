@@ -1,11 +1,10 @@
-namespace Shop.Models
+namespace WebApp1.Models
 {
-	using global::Shop.Models.Enums;
-	using System;
     using System.Collections.Generic;
-	using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations;
+    using WebApp1.Models.Enums;
 
-	public partial class Order
+    public partial class Order
     {
 
         public Order()

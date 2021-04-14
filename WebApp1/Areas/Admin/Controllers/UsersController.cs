@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Shop.Models;
 using WebApp1.Models;
 
 namespace WebApp1.Areas.Admin.Controllers

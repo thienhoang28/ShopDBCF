@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Shop.Models.Enums
+namespace WebApp1.Models.Enums
 {
 	public enum PriceType
 	{

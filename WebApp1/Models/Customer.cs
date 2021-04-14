@@ -1,4 +1,4 @@
-namespace Shop.Models
+namespace WebApp1.Models
 {
     using System;    
     

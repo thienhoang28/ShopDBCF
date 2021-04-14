@@ -1,4 +1,4 @@
-﻿@model Shop.Models.Category
+﻿@model WebApp1.Models.Category
 
 @{
     ViewBag.Title = "Details";
@@ -12,19 +12,19 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Parent.DisplayText)
+            @Html.DisplayNameFor(model => model.Parent.Category_Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Parent.DisplayText)
+            @Html.DisplayFor(model => model.Parent.Category_Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DisplayText)
+            @Html.DisplayNameFor(model => model.Category_Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DisplayText)
+            @Html.DisplayFor(model => model.Category_Name)
         </dd>
 
     </dl>
