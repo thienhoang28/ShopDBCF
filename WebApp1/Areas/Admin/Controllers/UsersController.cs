@@ -6,11 +6,16 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using WebApp1.Common;
 using WebApp1.Models;
+using WebApp1.Models.ViewModels;
 
 namespace WebApp1.Areas.Admin.Controllers
 {
-    public class UsersController : Controller
+    [Authorize(Roles = "admin")]
+    [CustomActionFilter]
+    [ExceptionHandlerFilter]
+    public class UsersController : BaseController
     {
         private ShopDbContext db = new ShopDbContext();
 
@@ -39,7 +44,7 @@ namespace WebApp1.Areas.Admin.Controllers
         // GET: Admin/Users/Create
         public ActionResult Create()
         {
-            ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName");
+            ViewBag.RolesList = new SelectList(DataUtils.GetRolesList(), "Key", "Value");
             return View();
         }
 
@@ -48,17 +53,21 @@ namespace WebApp1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,DisplayName,Roles,AccountId")] User user)
+        public ActionResult Create(UserAccountView viewModel)
         {
             if (ModelState.IsValid)
             {
+                User user = new User();
+                viewModel.CopyToUser(ref user);
                 db.Users.Add(user);
                 db.SaveChanges();
+                SetSuccessNotification();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
-            return View(user);
+            //ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
+            ViewBag.RolesList = new SelectList(DataUtils.GetRolesList(), "Key", "Value", viewModel.Roles);
+            return View(viewModel);
         }
 
         // GET: Admin/Users/Edit/5
@@ -73,8 +82,10 @@ namespace WebApp1.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
-            return View(user);
+            UserAccountView viewModel = new UserAccountView(user);
+            //ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
+            ViewBag.RolesList = new SelectList(DataUtils.GetRolesList(), "Key", "Value", viewModel.Roles);
+            return View(viewModel);
         }
 
         // POST: Admin/Users/Edit/5
@@ -82,16 +93,20 @@ namespace WebApp1.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,DisplayName,Roles,AccountId")] User user)
+        public ActionResult Edit(UserAccountView viewModel)
         {
             if (ModelState.IsValid)
             {
+                User user = db.Users.Find(viewModel.Id);
+                viewModel.CopyToUser(ref user);
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
+                SetSuccessNotification();
                 return RedirectToAction("Index");
             }
-            ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
-            return View(user);
+            //ViewBag.AccountId = new SelectList(db.Accounts, "Id", "LoginName", user.AccountId);
+            ViewBag.RolesList = new SelectList(DataUtils.GetRolesList(), "Key", "Value", viewModel.Roles);
+            return View(viewModel);
         }
 
         // GET: Admin/Users/Delete/5
@@ -117,6 +132,7 @@ namespace WebApp1.Areas.Admin.Controllers
             User user = db.Users.Find(id);
             db.Users.Remove(user);
             db.SaveChanges();
+            SetSuccessNotification();
             return RedirectToAction("Index");
         }
 
