@@ -200,6 +200,14 @@
     <Compile Include="Migrations\202104141044329_Namespace.designer.cs">
       <DependentUpon>202104141044329_Namespace.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104161224154_addDateAttribute.cs" />
+    <Compile Include="Migrations\202104161224154_addDateAttribute.designer.cs">
+      <DependentUpon>202104161224154_addDateAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104161301448_removeAttributeDescription.cs" />
+    <Compile Include="Migrations\202104161301448_removeAttributeDescription.designer.cs">
+      <DependentUpon>202104161301448_removeAttributeDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Category.cs" />
@@ -1051,6 +1059,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104141044329_Namespace.resx">
       <DependentUpon>202104141044329_Namespace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104161224154_addDateAttribute.resx">
+      <DependentUpon>202104161224154_addDateAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104161301448_removeAttributeDescription.resx">
+      <DependentUpon>202104161301448_removeAttributeDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

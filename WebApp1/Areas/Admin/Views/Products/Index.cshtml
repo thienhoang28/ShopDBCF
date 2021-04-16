@@ -57,7 +57,8 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FeatureImage)
+            @*@Html.DisplayFor(modelItem => item.FeatureImage)*@
+            <img src="@Server.UrlDecode(item.FeatureImage)" class="thumbnail product-image-thumb"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Category.Category_Name)

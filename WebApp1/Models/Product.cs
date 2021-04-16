@@ -31,8 +31,7 @@ namespace WebApp1.Models
         [Display(Name = "Model")]
         public string ModelCar { get; set; }
         
-        [MaxLength(500, ErrorMessage = "Content is too length.")]
-        [AllowHtml]
+        //[MaxLength(500, ErrorMessage = "Content is too length.")]
         public string Description { get; set; }
 
         [MaxLength(250)]
@@ -62,7 +61,8 @@ namespace WebApp1.Models
         public PublishStatus Status { get; set; }
 
         [Display(Name = "Publish on date")]
-        [DisplayFormat(DataFormatString = "yyyy-MM-dd")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", NullDisplayText = "", ApplyFormatInEditMode = true)]
         public DateTime PublishDate { get; set; }
 
         public virtual Category Category { get; set; }

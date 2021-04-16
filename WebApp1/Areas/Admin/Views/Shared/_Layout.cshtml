@@ -306,6 +306,12 @@
             <!-- Main content -->
             <div class="content">
                 <div class="container-fluid">
+                    @if (TempData.ContainsKey("Message"))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @TempData["Message"]
+                        </div>
+                    }
                     @RenderBody()
                 </div>
                 <!-- /.container-fluid -->

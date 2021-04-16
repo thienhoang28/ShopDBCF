@@ -12,6 +12,7 @@
 @using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
 
     <div class="form-horizontal">
         <h4>Product</h4>

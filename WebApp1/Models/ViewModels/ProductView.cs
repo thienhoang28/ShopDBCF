@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WebApp1.Models.ViewModels
 {
@@ -70,6 +71,7 @@ namespace WebApp1.Models.ViewModels
 
         public string ModelCar { get; set; }
 
+        [AllowHtml]
         public string Description { get; set; }
 
         public string FeatureImage { get; set; }

@@ -49,7 +49,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FeatureImage)
+            <img src="@Server.UrlDecode(Model.FeatureImage)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -57,7 +57,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Imglink1)
+            <img src="@Server.UrlDecode(Model.Imglink1)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -65,7 +65,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Imglink2)
+            @*@Html.DisplayFor(model => model.Imglink2)*@
+            <img src="@Server.UrlDecode(Model.Imglink2)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -73,7 +74,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Imglink3)
+            <img src="@Server.UrlDecode(Model.Imglink3)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -81,7 +82,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Imglink4)
+            <img src="@Server.UrlDecode(Model.Imglink4)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -89,7 +90,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Imglink5)
+            <img src="@Server.UrlDecode(Model.Imglink5)" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>

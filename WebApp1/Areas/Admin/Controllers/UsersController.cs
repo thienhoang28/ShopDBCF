@@ -98,7 +98,17 @@ namespace WebApp1.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 User user = db.Users.Find(viewModel.Id);
-                viewModel.CopyToUser(ref user);
+                if (viewModel.Password == null || string.IsNullOrEmpty(viewModel.Password))
+                {
+                    user.Account.LoginName = viewModel.LoginName;
+                    user.DisplayName = viewModel.DisplayName;
+                    user.Account.Email = viewModel.Email;
+                    user.Roles = viewModel.Roles;
+                }
+                else
+                {
+                    viewModel.CopyToUser(ref user);
+                }
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
                 SetSuccessNotification();
