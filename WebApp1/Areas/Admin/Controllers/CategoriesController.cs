@@ -2,10 +2,14 @@
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using WebApp1.Common;
 using WebApp1.Models;
 
 namespace WebApp1.Areas.Admin.Controllers
 {
+    [Authorize]
+    [CustomActionFilter]
+    [ExceptionHandlerFilter]
     public class CategoriesController : BaseController
     {
         private ShopDbContext db = new ShopDbContext();

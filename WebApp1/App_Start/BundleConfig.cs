@@ -46,6 +46,7 @@ namespace WebApp1
             //Style bundle for UserPage
             bundles.Add(new StyleBundle("~/Content/userpage/css").Include(
                       "~/Content/UserContent/libs/bootstrap/css/bootstrap.min.css",
+                      "~/Content/UserContent/css/login.css",
                       "~/Content/UserContent/css/main.css"));
         }
     }
