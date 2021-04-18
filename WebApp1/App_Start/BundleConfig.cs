@@ -45,9 +45,7 @@ namespace WebApp1
                       "~/Content/adminlte.min.css"));
             //Style bundle for UserPage
             bundles.Add(new StyleBundle("~/Content/userpage/css").Include(
-                      "~/Content/UserContent/libs/bootstrap/css/bootstrap.min.css",
-                      "~/Content/UserContent/css/login.css",
-                      "~/Content/UserContent/css/main.css"));
+                      "~/Content/UserContent/libs/bootstrap/css/bootstrap.min.css"));
         }
     }
 }

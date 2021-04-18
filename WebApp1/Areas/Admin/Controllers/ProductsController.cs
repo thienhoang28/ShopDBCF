@@ -62,6 +62,7 @@ namespace WebApp1.Areas.Admin.Controllers
             {
                 viewModel.CopyToProduct(ref product);
                 product.FeatureImage = SaveFile(viewModel.UploadFile, product.FeatureImage);
+                product.DtImage = SaveFile(viewModel.UploadFile6, product.DtImage);
                 product.Imglink1 = SaveFile(viewModel.UploadFile1, product.Imglink1);
                 product.Imglink2 = SaveFile(viewModel.UploadFile2, product.Imglink2);
                 product.Imglink3 = SaveFile(viewModel.UploadFile3, product.Imglink3);
@@ -106,6 +107,7 @@ namespace WebApp1.Areas.Admin.Controllers
                 Product product = db.Products.Find(viewModel.Id);
                 viewModel.CopyToProduct(ref product);
                 product.FeatureImage = SaveFile(viewModel.UploadFile, product.FeatureImage);
+                product.DtImage = SaveFile(viewModel.UploadFile6, product.DtImage);
                 product.Imglink1 = SaveFile(viewModel.UploadFile1, product.Imglink1);
                 product.Imglink2 = SaveFile(viewModel.UploadFile2, product.Imglink2);
                 product.Imglink3 = SaveFile(viewModel.UploadFile3, product.Imglink3);

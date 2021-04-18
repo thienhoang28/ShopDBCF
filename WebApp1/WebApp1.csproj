@@ -172,7 +172,10 @@
     <Compile Include="Common\ExceptionHandlerFilter.cs" />
     <Compile Include="Common\MyHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,6 +210,10 @@
     <Compile Include="Migrations\202104161301448_removeAttributeDescription.cs" />
     <Compile Include="Migrations\202104161301448_removeAttributeDescription.designer.cs">
       <DependentUpon>202104161301448_removeAttributeDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104180922349_addDtImageProduct.cs" />
+    <Compile Include="Migrations\202104180922349_addDtImageProduct.designer.cs">
+      <DependentUpon>202104180922349_addDtImageProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -275,6 +282,7 @@
     <Content Include="Content\img\admin\user7-128x128.jpg" />
     <Content Include="Content\img\admin\user8-128x128.jpg" />
     <Content Include="Content\UserContent\css\about.css" />
+    <Content Include="Content\UserContent\css\cart.css" />
     <Content Include="Content\UserContent\css\compare.css" />
     <Content Include="Content\UserContent\css\contact.css" />
     <Content Include="Content\UserContent\css\details.css" />
@@ -1024,6 +1032,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
@@ -1065,6 +1076,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104161301448_removeAttributeDescription.resx">
       <DependentUpon>202104161301448_removeAttributeDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104180922349_addDtImageProduct.resx">
+      <DependentUpon>202104180922349_addDtImageProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

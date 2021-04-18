@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebApp1.Models.ViewModels;
 
 namespace WebApp1.Common
 {
@@ -28,5 +29,14 @@ namespace WebApp1.Common
 				{"user", "Normal User" }
 			};
 		}
-	}
+
+        public static int GetNumberOfCartItems(object collection)
+        {
+            if (!(collection is List<CartItem>))
+            {
+                return 0;
+            }
+            return (collection as List<CartItem>).Count;
+        }
+    }
 }

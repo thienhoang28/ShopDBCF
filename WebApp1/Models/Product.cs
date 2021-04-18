@@ -39,6 +39,10 @@ namespace WebApp1.Models
         public string FeatureImage { get; set; }
 
         [MaxLength(250)]
+        [Display(Name = "Detail Image")]
+        public string DtImage { get; set; }
+
+        [MaxLength(250)]
         [Display(Name = "Image1")]
         public string Imglink1 { get; set; }
 

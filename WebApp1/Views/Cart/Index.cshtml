@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebApp1.Models.ViewModels.CartItem>
+
+@{
+    ViewBag.Title = "Shopping Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class=" mt-3 mb-5">
+    <div class="">
+        <h2>Your Cart</h2>
+        
+    </div>
+        <p>
+            @Html.ActionLink("Continue shopping", "Index", new { controller = "Products" })
+        </p>
+        <div class="container-fluid mb-5">
+            @using (Html.BeginForm("UpdateCart", "Cart", FormMethod.Post))
+            {
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ImageUrl)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ProductName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Quantity)
+                        </th>
+                        <th>
+                            Total Cost
+                        </th>
+                        <th></th>
+                    </tr>
+                    @{var SumCost = 0; }
+
+                    @foreach (var item in Model)
+                    {
+                        SumCost +=(int)item.Price * item.Quantity;
+                        
+
+                        <tr>
+                            <td>
+                                <img class="img-thumbnail product-image-thumb" style="max-width:100px; max-height:100px;" src="@Server.UrlDecode(item.ImageUrl)" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductName)
+                                <input type="hidden" value="@item.ProductId" name="productIds" id="productId_@item.ProductId" />
+                            </td>
+                            <td>
+                                <p class="text-danger">$@Html.DisplayFor(modelItem => item.Price)</p>
+                            </td>
+                            <td>
+                                <input type="number" value="@item.Quantity" name="quantities" id="quantity_@item.ProductId" />
+                            </td>
+                            <td>
+                                <p class="text-success font-weight-bold">$@(item.Price * item.Quantity)</p>
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                                @Html.ActionLink("Delete", "RemoveFromCart", new { id = item.ProductId })
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <div class="float-right"><h6 class="text-success d-inline font-weight-bold">Total: </h6><span class="text-danger d-inline mr-5">$@SumCost</span></div>
+                <input type="submit" value="Update Cart" class="btn btn-success" />
+                @Html.ActionLink("Check out", "CheckOut", null, new { @class = "btn btn-primary" })
+                    
+            }
+        </div>
+</div>
+
+@section cartcss {
+    <link href="@Url.Content("~/Content/UserContent/css/cart.css")" rel="stylesheet" type="text/css" />
+}
+

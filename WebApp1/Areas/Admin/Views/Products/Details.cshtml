@@ -52,6 +52,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.DtImage)
+        </dt>
+
+        <dd>
+            <img src="@Server.UrlDecode(Model.DtImage)" class="thumbnail product-image-thumb" />
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Imglink1)
         </dt>
 

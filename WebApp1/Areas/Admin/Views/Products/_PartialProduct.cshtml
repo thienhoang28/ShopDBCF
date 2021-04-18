@@ -64,6 +64,20 @@
 </div>
 
 <div class="form-group">
+    @Html.LabelFor(model => model.DtImage, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.UploadFile6, new { @type = "file" })
+        @Html.ValidationMessageFor(model => model.UploadFile6, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model?.DtImage))
+        {
+            <img src="@Server.UrlDecode( Model.DtImage)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+        }
+    </div>
+</div>
+
+<div class="form-group">
     @Html.LabelFor(model => model.Imglink1, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
         @Html.TextBoxFor(model => model.UploadFile1, new { @type = "file" })

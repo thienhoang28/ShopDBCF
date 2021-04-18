@@ -1,0 +1,86 @@
+﻿@model IEnumerable<WebApp1.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Index</h2>*@
+
+<div class="advancedSearch mt-4 ml-5 container">
+
+    @using (Html.BeginForm("Index", "Products", FormMethod.Post))
+    {
+        <div class="name row ">
+            @*<div class="form-group col-md-2 col-6">*@
+            <select id="myselect1" name="brand" class="form-control form-control-lg col-md-2 col-6">
+                <option value="all"> Brands</option>
+                <option value="Toyota"> Toyota</option>
+                <option value="Audi"> Audi</option>
+                <option value="Mercedes"> Mercedes</option>
+                <option value="Honda"> Honda</option>
+                <option value="Yamaha"> Yamaha</option>
+            </select>
+            @*</div>*@
+            @*<div class="form-group col-md-3 col-6">*@
+            <select id="myselect2" name="model" class="form-control form-control-lg col-md-3 col-6">
+                <option value="all"> All models</option>
+                <option value="SUV"> SUV</option>
+                <option value="Sedan"> Sedan</option>
+                <option value="Moto">Moto</option>
+            </select>
+            @*</div>*@
+            @*<div class="form-group col-md-3 col-6">*@
+            <select id="myselect3" name="price" class="form-control form-control-lg col-md-3 col-6">
+                <option value="all">All price</option>
+                <option value="prl2">$ lower 2,000</option>
+                <option value="pr2-5">$ 2,000 - 5,000</option>
+                <option value="pr5-15">$ 5,000 - 15,000</option>
+                <option value="pr15-50">$ 15,000 - 50,000</option>
+                <option value="pr50-100">$ 50,000 - 100,000</option>
+                <option value="pr100-200">$ 100,000 - 200,000</option>
+                <option value="pru200">$ upper 200,000</option>
+            </select>
+            @*</div>*@
+            @*<div class="form-group">*@
+            <div class="btn4 col-md-4 col-6">
+                <input type="submit" value="Search" class="btn btn-success btn-lg" />
+            </div>
+            @*</div>*@
+        </div>
+    }
+
+</div>
+
+<div class=" mt-3">
+    <div class="">
+            <h2>All Products</h2>
+            <hr>
+    </div>
+    <!-- --line1-- -->
+    <div class="row">
+        <!-- Product  -->
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-6 col-lg-4 product-grid1">
+                <div class="image">
+
+                    <a href="@Url.Action("Details", "Products", new {id = item.Id })">
+                        <img src="@Server.UrlDecode(item.FeatureImage)" alt="">
+                    </a>
+                    <h4 class="text-center">@item.Name</h4>
+                    <h5 class="text-center">Price: $@item.Prices.First().Value</h5>
+                    @*<h5 class="text-center">7 seat</h5>*@
+                    <a href="@Url.Action("Details", "Products", new {id = item.Id })" class=" buy btn btn-danger btn-lg ">Details</a>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@section productcss {
+    <link href="@Url.Content("~/Content/UserContent/css/products.css")" rel="stylesheet" type="text/css" />
+}

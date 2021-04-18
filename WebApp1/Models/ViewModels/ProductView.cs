@@ -26,6 +26,7 @@ namespace WebApp1.Models.ViewModels
             ModelCar = product.ModelCar;
             Description = product.Description;
             FeatureImage = product.FeatureImage;
+            DtImage = product.DtImage;
             Imglink1 = product.Imglink1;
             Imglink2 = product.Imglink2;
             Imglink3 = product.Imglink3;
@@ -76,6 +77,8 @@ namespace WebApp1.Models.ViewModels
 
         public string FeatureImage { get; set; }
 
+        public string DtImage { get; set; }
+
         public string Imglink1 { get; set; }
 
         public string Imglink2 { get; set; }
@@ -93,6 +96,8 @@ namespace WebApp1.Models.ViewModels
         public decimal Price { get; set; }
 
         public HttpPostedFileBase UploadFile { get; set; }
+
+        public HttpPostedFileBase UploadFile6 { get; set; }
 
         public HttpPostedFileBase UploadFile1 { get; set; }
 

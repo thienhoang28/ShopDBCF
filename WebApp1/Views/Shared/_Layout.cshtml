@@ -8,6 +8,11 @@
     @Styles.Render("~/Content/adminlte/css")
     @Styles.Render("~/Content/userpage/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("maincss", required: false)
+    @RenderSection("logincss", required: false)
+    @RenderSection("productcss", required: false)
+    @RenderSection("detailcss", required: false)
+    @RenderSection("cartcss", required: false)
 </head>
 <body>
     <header id="header" class="">
@@ -41,13 +46,19 @@
                     <li class="nav-item">
                         <a href="contact.html" title="" class="nav-link">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    @*<li class="nav-item">
                         <a href="Sitemap.html" title="" class="nav-link">Sitemap</a>
-                    </li>
+                    </li>*@
                     <li class="nav-item">
                         <a href="login.html?#log" title="" class="nav-link">Login</a>
                     </li>
+
                 </ul>
+                <div class="nav-item">
+                    @*@Html.ActionLink("Shopping Cart", "Index", new { controller = "Cart" })*@
+                    <a href="@Url.Action("Index", "Cart", new { @class = "text-success"})"><i class="fas fa-shopping-cart text-success"></i></a>
+                    <span class="badge badge-danger">@WebApp1.Common.DataUtils.GetNumberOfCartItems(Session["Cart"])</span>
+                </div>
 
             </div>
 

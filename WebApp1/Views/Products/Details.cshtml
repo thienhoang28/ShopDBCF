@@ -1,0 +1,131 @@
+﻿@model WebApp1.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Details</h2>*@
+<div class="container mt-4 mb-4">
+
+    <div class="detail2">
+        <div class="row ct">
+            <div class="information my-auto col-5 col-md-4">
+                <h3>@Model.Name</h3>
+                <h5>
+                    Price: $@Model.Prices.First().Value<h5>
+                        <p>
+                            @Html.Raw(Model.Description)
+                        </p>
+
+                        @*<a href="#" class="btn btn-danger mt-1">Sign up for drive</a>*@
+                        @*<a href="#" class="btn btn-danger mt-1">Add to Cart</a>*@
+                        <p>@Html.ActionLink("Add to Cart", "AddToCart", new { controller = "Cart", id = Model.Id }, new { @class = "btn btn-danger mt-1" })</p>
+                        @*<a href="#" class="btn btn-danger mt-1">Compare</a>*@
+            </div>
+            <div class="col-7 col-md-8 my-auto">
+                <img src="@Server.UrlDecode(Model.DtImage)" class="w-100">
+            </div>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="title1 row">
+                <div class="col-12">
+                    <h1>Highlights</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-5 my-auto">
+                    <img src="@Server.UrlDecode(Model.Imglink1)" alt="" class="w-100 ">
+                </div>
+                <div class="cap1 col-7 pt-3">
+                    <h4>Exterior</h4>
+                    <hr>
+                    <h1>Impressive appearance</h1>
+                    <p>AutoWorld always guides customers with excellent products and quality</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="gla col-6 ">
+                    <img src="@Server.UrlDecode(Model.Imglink2)" class="w-100">
+                </div>
+                <div class="gla col-6 ">
+                    <img src="@Server.UrlDecode(Model.Imglink3)" class="w-100">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="gla col-6 ">
+                    <img src="@Server.UrlDecode(Model.Imglink4)" class="w-100">
+                </div>
+                <div class="gla col-6 ">
+                    <img src="@Server.UrlDecode(Model.Imglink5)" class="w-100">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @*<div class="detail2" ng-repeat="moto in motos| filter:filterId">
+            <div class="row ct">
+                <div class="information my-auto col-7 col-md-5">
+                    <h3>{{moto.name}}</h3>
+                    <h5>
+                        Price: {{moto.price}}<h5>
+                            <p>
+                                - Weight: {{moto.weight}}<br>
+                                - Petrol Tank Capacity: {{moto.petrolTankCapacity}}<br>
+                                - Engine Type: {{moto.engineType}}<br>
+                                - Maximum Power: {{moto.maximumPower}}<br>
+                                - Maximum Moment: {{moto.maximumMoment}}<br>
+                                - Cylinder Capacity: {{moto.cylinderCapacity}}
+                            </p>
+                            <a href="#slides" class="btn btn-danger mt-1">Sign up for drive</a>
+                            <a href="compare.html?{{moto.id}}" class="btn btn-danger mt-1">Compare</a>
+                </div>
+                <div class="col-5 col-md-7 my-auto ">
+                    <img ng-src="{{moto.img}}" class="w-100 ">
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="title1 row">
+                    <div class="col-12">
+                        <h1>Highlights</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mx-0">
+                    <div class="col-5 my-auto">
+                        <img ng-src="{{moto.img1}}" alt="" class="w-100 ">
+                    </div>
+                    <div class="cap1 col-7 pt-3">
+                        <h4>Exterior</h4>
+                        <hr>
+                        <h1>Impressive appearance</h1>
+                        <p>AutoWorld always guides customers with excellent products and quality</p>
+                    </div>
+                </div>
+                <div class="row mx-0 mt-2">
+                    <div class="gla col-6 ">
+                        <img ng-src="{{moto.img2}}" class="w-100">
+                    </div>
+                    <div class="gla col-6 ">
+                        <img ng-src="{{moto.img3}}" class="w-100">
+                    </div>
+                </div>
+                <div class="row mx-0 mb-2">
+                    <div class="gla col-6 ">
+                        <img ng-src="{{moto.img4}}" class="w-100">
+                    </div>
+                    <div class="gla col-6 ">
+                        <img ng-src="{{moto.img5}}" class="w-100">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>*@
+</div>
+
+
+@section detailcss {
+    <link href="@Url.Content("~/Content/UserContent/css/details.css")" rel="stylesheet" type="text/css" />
+} 
