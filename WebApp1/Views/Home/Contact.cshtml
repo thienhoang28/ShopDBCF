@@ -1,17 +1,109 @@
 ﻿@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>*@
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@*<address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <address>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    </address>*@
+
+<div id="contact-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email us and keep upto date with our latest news</p>
+        <div class="contact-form">
+
+            <div class="icon-form">
+                <a href="https://goo.gl/maps/9mt66YhCT2eZVua1A"><i class="icons fas fa-map-marker-alt"></i></a>
+                <span class="form-info">6 Le Loi, Hue city, Viet Nam</span><br>
+                <a href="tel:+84123456789">
+                    <i class="icons fa fa-phone"></i>
+                </a>
+                <span class="form-info">Phone +84902345678</span>
+                <br>
+                <a href="mailto:HueAptech@gmail.com">
+                    <i class="icons far fa-envelope"></i>
+                </a>
+                <span class="form-info">HueAptech@gmail.com</span>
+            </div>
+
+            <div>
+                <form id="form" action="success.html">
+                    <input type="text" placeholder="Your Name" required>
+                    <!-- <input type="text" placeholder="Your Name" required> -->
+                    <input type="Email" placeholder="Your mail" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button class="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid showrooms">
+    <div class="row pl-3">
+        <h2>
+            <span class="wehave">
+                We have 4 main showrooms
+            </span>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="list-group col-4">
+            <div class="list-group col">
+                <a href="#ad-1" title="" class="list-group-item list-group-item-action active" data-toggle="list">6 Le Loi, Hue, Vietnam</a>
+                <a href="#ad-2" title="" class="list-group-item list-group-item-action" data-toggle="list">11 Ly Thuong Kiet, Hue, Vietnam</a>
+                <a href="#ad-3" title="" class="list-group-item list-group-item-action" data-toggle="list">8 Hai Ba Trung, Hue, Vietnam</a>
+                <a href="#ad-4" title="" class="list-group-item list-group-item-action" data-toggle="list">20 HungVuong, Hue, Vietnam</a>
+            </div>
+        </div>
+        <div class="col-8 ">
+            <div class="tab-content">
+                <div class="tab-pane active" id="ad-1">
+                    <div class="map pt-3 pb-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.580864890146!2d107.58113811046712!3d16.45915125218255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a149ddda59d3%3A0x95c5750b90b08a8a!2zNiBMw6ogTOG7o2ksIFbEqW5oIE5pbmgsIFRow6BuaCBwaOG7kSBIdeG6vywgVGjhu6thIFRoacOqbiBIdeG6vywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1605456388721!5m2!1svi!2s" width="86%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </div>
+                <div class="tab-pane " id="ad-2">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.2730568948878!2d107.58920311341319!3d16.46170568863947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1392902437d%3A0xd5dff0cbab86b4e4!2zMTEgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFBow7ogTmh14bqtbiwgVGjDoG5oIHBo4buRIEh14bq_LCBIdeG6vywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1605456783792!5m2!1svi!2s" width="86%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </div>
+                <div class="tab-pane " id="ad-3">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.3180922560587!2d107.58683001341319!3d16.459423288640885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a1387d6ad653%3A0x483494b66d313434!2zOCBIYWkgQsOgIFRyxrBuZywgVsSpbmggTmluaCwgVGjDoG5oIHBo4buRIEh14bq_LCBUaOG7q2EgVGhpw6puIEh14bq_LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1605456841126!5m2!1svi!2s" width="86%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="ad-4">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.210124687358!2d107.59109641341331!3d16.464894588637552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a13c17886113%3A0x2139d7ee4a7495fa!2zMjAgSMO5bmcgVsawxqFuZywgUGjDuiBI4buZaSwgVGjDoG5oIHBo4buRIEh14bq_LCBUaOG7q2EgVGhpw6puIEh14bq_LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1605456889360!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section maincss {
+    <link href="@Url.Content("~/Content/UserContent/css/main.css")" rel="stylesheet" type="text/css" />
+}
+
+@section contactcss {
+    <link href="@Url.Content("~/Content/UserContent/css/contact.css")" rel="stylesheet" type="text/css" />
+}

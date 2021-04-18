@@ -13,6 +13,9 @@
     @RenderSection("productcss", required: false)
     @RenderSection("detailcss", required: false)
     @RenderSection("cartcss", required: false)
+    @RenderSection("aboutcss", required: false)
+    @RenderSection("contactcss", required: false)
+    @RenderSection("servicecss", required: false)
 </head>
 <body>
     <header id="header" class="">
@@ -115,10 +118,11 @@
             </a>
         </div>
 
-        <div class="content">
-            <div class="container-fluid">
+        <div class="">
+            @*<div class="container-fluid">*@
+                @{Html.RenderPartial("_Notification"); }
                 @RenderBody()
-            </div>
+            @*</div>*@
         </div>
 
     </main>

@@ -1,7 +1,141 @@
 ﻿@{
     ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@*<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>*@
 
-<p>Use this area to provide additional information.</p>
+@*<p>Use this area to provide additional information.</p>*@
+
+<div class="mainabout">
+    <div class="col-12">
+        <center>
+            <h1 class="pt-3">
+                AUTOWORLD
+            </h1>
+            ___________<i class="fa fa-car"></i>___________
+            <p>
+                We will bring you the perfect choice and<br>
+                reputation, enthusiasm, quality assurance make up the brand
+            </p>
+        </center>
+    </div>
+    <div class="pt-3 container-fluid">
+        <div class="row">
+            <div class="col-6 col-lg-3 mb-3" id="centerabout">
+                <div class="first text-center">
+                    <img src="~/Content/UserContent/images/about/about1.png" height="115px">
+                    <h4>
+                        Diverse Favorite Vehicle Line
+                    </h4>
+                    <p>
+                        Providing all new models from 4 seats to 45 seats. The new luxury Dcar limousine models with modern facilities in 2019 offer many options
+                    </p>
+                </div>
+                <div class="pt-3 mt-3">
+                    <div class="second text-center">
+                        <img class="pt-3" src="~/Content/UserContent/images/about/about3.png" height="175px">
+                        <h4>
+                            Friendly Driver / Advisor / Driver
+                        </h4>
+                        <p>
+                            All staff, dynamic drivers, love their job and have been trained rigorously. Convenient Procedures - Support 24/7
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg col-6 my-auto d-none d-lg-block">
+                <img id="imgabout" class="w-100" src="~/Content/UserContent/images/about/about444.jpg">
+            </div>
+            <div class="col-6 col-lg-3 mb-3" id="centerabout2">
+                <div class="first text-center">
+                    <img src="~/Content/UserContent/images/about/about2.png " height="115px">
+                    <h4>
+                        Reputable Brand Brings Reaching Far
+                    </h4>
+                    <p>
+                        AutoWorld As one of the promising companies with strong development in Hanoi. The car rental brand is highly appreciated by the press and television
+                    </p>
+                </div>
+                <div class="pt-3">
+                    <div class="second text-center">
+                        <img class="pt-3" src="~/Content/UserContent/images/about/about4.png" height="175px">
+                        <h4>
+                            Reasonable Price Balance, 100% Satisfied
+                        </h4>
+                        <p>
+                            Always bring the cheapest car rental on the market and discount incentives for customers who contact car rental reservations early ..
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <hr>
+    <div>
+        <div class="container-fluid">
+            <h4 class="text-center">
+                The spirit of serving customers
+            </h4>
+            <div class="m-1 mr-5 ml-5 text-justify">
+                Every team member, from the Board of Directors to our employees, is reminded daily that our customers are the reason we exist. We do well every day to provide our customers with the best possible service. This means,We serve customers first priority, we support our employees so they can serve their customers best.
+            </div>
+        </div>
+
+        <div class="text-center">
+            <img class="w-75 py-3" src="~/Content/UserContent/images/about/abouta.jpg">
+            <p>
+                Lounge area for customers
+            </p>
+        </div>
+        <hr>
+        <div class="container-fluid">
+            <h4 class="text-center">
+                Servie Branch
+            </h4>
+            <div class="m-1 mr-5 ml-5 text-justify">
+                Customers will be completely assured when coming to AutoWorld's service workshop - a member of AutoWorld. Here, we have a team of enthusiastic and experienced Service Advisors, highly skilled Technicians, regularly trained according to Vietnamese standards. In addition, our showroom alternately invests and upgrades equipment and technology, as well as self-improvement and professionalism, service style with the desire to increasingly improve service value, bring customers the highest satisfaction.
+            </div>
+        </div>
+        <div class="text-center">
+
+            <img class="w-75 py-3" src="~/Content/UserContent/images/about/gara.jpg">
+            <p>
+                Service repair area
+            </p>
+
+        </div>
+        <hr>
+        <div class="container-fluid">
+            <h4 class="text-center">
+                Bussiness Department
+            </h4>
+            <div class="m-1 mr-5 ml-5 text-justify">
+                Special showroom owns a team of young, dynamic, enthusiastic and professional sales staff in consultation with the desire to bring the most value and satisfaction to customers. With the available advantages, AutoWorld is always trusted by many customers, is one of the showrooms with many loyal customers in the system.
+
+                Our sales staff work with the spirit of "Dedication - Professionalism" to help customers choose a car like that and that suit their requirements.
+
+                In addition to advising customers to choose new products, staff will assist in consulting with necessary procedures when customers need: Bank loan procedures, Types of insurance, Post Vehicle Registration, Vehicle Registration, Vehicle Manual, Test Drive.
+
+                Some pictures of the sales department members at AutoWorld:
+            </div>
+            <div class="text-center">
+                <img class="w-75 py-3" src="~/Content/UserContent/images/about/vanphong.jpg">
+                <p>
+                    Administrative office area
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    @section aboutcss {
+        <link href="@Url.Content("~/Content/UserContent/css/about.css")" rel="stylesheet" type="text/css" />
+    }
+
+    @section maincss {
+        <link href="@Url.Content("~/Content/UserContent/css/main.css")" rel="stylesheet" type="text/css" />
+    }

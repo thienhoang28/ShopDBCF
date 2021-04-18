@@ -1,0 +1,33 @@
+﻿@using WebApp1.Models.ViewModels
+
+@{
+	// In this partial view, we demonstrate how to declare and use variables in Razor expression 
+	NotificationMessage message = TempData["Message"] as NotificationMessage;
+	if(message == null)
+	{
+		return;
+	}
+	string alertClass;
+	switch (message.MessageType)
+	{
+		case "success":
+			alertClass = "alert-success";
+			break;
+		case "error":
+			alertClass = "alert-danger";
+			break;
+		case "warn":
+			alertClass = "alert-warning";
+			break;
+		default:
+			alertClass = "alert-info";
+			break;
+	}
+	}
+	@if (message != null)
+	{
+
+	<div class="alert @alertClass" role="alert">
+		@message.Content
+	</div>
+}

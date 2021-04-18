@@ -26,5 +26,12 @@ namespace WebApp1.Controllers
 
             return View();
         }
+
+        public ActionResult Service()
+        {
+            ViewBag.Message = "Your service page.";
+
+            return View();
+        }
     }
 }
