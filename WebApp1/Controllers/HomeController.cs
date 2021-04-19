@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApp1.Models;
+using System.Data.Entity;
 
 namespace WebApp1.Controllers
 {
     public class HomeController : Controller
     {
+        ShopDbContext db = new ShopDbContext();
         public ActionResult Index()
         {
-            return View();
+            var products = db.Products.Include(p => p.Prices).Include(p => p.Category).ToList();
+            return View(products);
+            
         }
 
         public ActionResult About()

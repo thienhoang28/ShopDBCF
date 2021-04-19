@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @*@Styles.Render("~/Content/css")*@
-    @Styles.Render("~/Content/adminlte/css")
+    @*@Styles.Render("~/Content/adminlte/css")*@
     @Styles.Render("~/Content/userpage/css")
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("maincss", required: false)
@@ -32,28 +32,28 @@
             <div class=" collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="index.html" title="" class="nav-link active">Home</a>
+                        <a href="@Url.Action("Index", "Home")" title="" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" title="" class="nav-link">About</a>
+                        <a href="@Url.Action("About", "Home")" title="" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="products.html" title="" class="nav-link">Products</a>
+                        <a href="@Url.Action("Index", "Products")" title="" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" title="" class="nav-link">Services</a>
+                        <a href="@Url.Action("Secvice", "Home")" title="" class="nav-link">Services</a>
                     </li>
                     @*<li class="nav-item">
                         <a href="loan.html" title="" class="nav-link">Loan</a>
                     </li>*@
                     <li class="nav-item">
-                        <a href="contact.html" title="" class="nav-link">Contact</a>
+                        <a href="@Url.Action("Contact", "Home")" title="" class="nav-link">Contact</a>
                     </li>
                     @*<li class="nav-item">
                         <a href="Sitemap.html" title="" class="nav-link">Sitemap</a>
                     </li>*@
                     <li class="nav-item">
-                        <a href="login.html?#log" title="" class="nav-link">Login</a>
+                        <a href="@Url.Action("Login", "Account")" title="" class="nav-link">Login</a>
                     </li>
 
                 </ul>
@@ -186,7 +186,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/adminlte")
+    @*@Scripts.Render("~/bundles/adminlte")*@
     @Scripts.Render("~/bundles/userpage")
     @RenderSection("scripts", required: false)
 </body>

@@ -15,8 +15,8 @@ namespace WebApp1
                         "~/Scripts/jquery.validate*"));
 
             //Script bundle for AdminLTE
-            bundles.Add(new ScriptBundle("~/bundles/adminlte").Include(
-                        "~/Scripts/adminlte.min.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/adminlte").Include(
+            //            "~/Scripts/adminlte.min.js"));
             //Script bundle for UserPage
             bundles.Add(new ScriptBundle("~/bundles/userpage").Include(
                         "~/Content/UserContent/libs/font-awesome/js/all.js",
@@ -33,7 +33,7 @@ namespace WebApp1
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.bundle.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
