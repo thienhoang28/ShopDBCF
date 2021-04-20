@@ -11,10 +11,18 @@ namespace WebApp1.Controllers
     {
         ShopDbContext db = new ShopDbContext();
         // GET: Shop
-        public ActionResult Index()
+        public ActionResult Index(List<Product> newProducts)
         {
             var products = db.Products.Include(p => p.Prices).Include(p => p.Category).ToList();
-            return View(products);
+            if (newProducts != null)
+            {
+                return View(newProducts);
+            }
+            else
+            {
+                //var products = db.Products.Include(p => p.Prices).Include(p => p.Category).ToList();
+                return View(products);
+            }
         }
 
 
@@ -95,26 +103,26 @@ namespace WebApp1.Controllers
             if(String.Compare(brand, "all") == 0 && String.Compare(model, "all") == 0)
             {
                 var nprod = products.Where(p => (p.Prices.FirstOrDefault().Value >= priceF) && (p.Prices.FirstOrDefault().Value <= priceT));
-                return View(nprod.ToList());
+                return RedirectToAction("Index",nprod.ToList());
             }
             else if(String.Compare(brand, "all") != 0 && String.Compare(model, "all") == 0)
             {
                 var nprod = products.Where(p => (String.Compare(p.Category.Category_Name, brand) == 0) && (p.Prices.FirstOrDefault().Value >= priceF) && (p.Prices.FirstOrDefault().Value <= priceT));
-                return View(nprod.ToList());
+                return RedirectToAction("Index", nprod.ToList());
             }
             else if(String.Compare(brand, "all") == 0 && String.Compare(model, "all") != 0)
             {
                 var nprod = products.Where(p => (String.Compare(p.ModelCar, model) == 0) && (p.Prices.FirstOrDefault().Value >= priceF) && (p.Prices.FirstOrDefault().Value <= priceT));
-                return View(nprod.ToList());
+                return RedirectToAction("Index", nprod.ToList());
             }
             else if(String.Compare(brand, "all") != 0 && String.Compare(model, "all") != 0)
             {
                 var nprod = products.Where(p => (String.Compare(p.Category.Category_Name, brand) == 0) && (String.Compare(p.ModelCar, model) == 0) && (p.Prices.FirstOrDefault().Value >= priceF) && (p.Prices.FirstOrDefault().Value <= priceT));
-                return View(nprod.ToList());
+                return RedirectToAction("Index", nprod.ToList());
             }
             else
             {
-                return View(products.ToList());
+                return RedirectToAction("Index",products.ToList());
             }
         }
         //[HttpGet]
