@@ -74,7 +74,8 @@ namespace WebApp1.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ParentId = new SelectList(db.Categories, "Id", "Category_Name", category.ParentId);
+            //ViewBag.ParentId = new SelectList(db.Categories, "Id", "Category_Name", category.ParentId);
+            ViewBag.Categories = DataUtils.GetCategories(db, category);
             return View(category);
         }
 

@@ -51,11 +51,14 @@ namespace WebApp1.Controllers
 		public ActionResult UpdateCart(long[] productIds, int[] quantities)
 		{
 			var items = GetCartItems();
-			for (int i = 0; i < productIds.Length; i++)
-			{
-				var cartItem = items.Where(product => product.ProductId == productIds[i]).First();
-				cartItem.Quantity = quantities[i];
-			}
+            if (productIds != null)
+            {
+                for (int i = 0; i < productIds.Length; i++)
+                {
+                    var cartItem = items.Where(product => product.ProductId == productIds[i]).First();
+                    cartItem.Quantity = quantities[i];
+                }
+            }
 			return RedirectToAction("Index");
 		}
 

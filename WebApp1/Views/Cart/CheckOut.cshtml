@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>CheckOut</h2>*@
+<section id="successp" class="container-fluid">
+    <!-- <div class="container text-center"> -->
+    <div id="content" class="d-flex flex-column align-items-center justify-content-center">
+        <div class="text text-center mb-2">
+            <h1>Action performed</h1>
+            <h1>Successfully</h1>
+        </div>
+        <div class="link">
+            <a href="@Url.Action("Index", "Products")" class="btn btn-warning">BACK TO HOME</a>
+        </div>
+    </div>
+    <!-- </div> -->
+</section>
+
+
+@section successcss {
+    <link href="@Url.Content("~/Content/UserContent/css/success.css")" rel="stylesheet" type="text/css" />
+}
+
+
+@section maincss {
+    <link href="@Url.Content("~/Content/UserContent/css/main.css")" rel="stylesheet" type="text/css" />
+}
