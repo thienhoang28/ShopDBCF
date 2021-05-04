@@ -11,18 +11,13 @@ namespace WebApp1.Controllers
     {
         ShopDbContext db = new ShopDbContext();
         // GET: Shop
-        public ActionResult Index(List<Product> newProducts)
+        public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Prices).Include(p => p.Category).ToList();
-            if (newProducts != null)
-            {
-                return View(newProducts);
-            }
-            else
-            {
+            
                 //var products = db.Products.Include(p => p.Prices).Include(p => p.Category).ToList();
-                return View(products);
-            }
+            return View(products);
+            
         }
 
 

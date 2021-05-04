@@ -1,4 +1,5 @@
-﻿@model IEnumerable<WebApp1.Models.Product>
+﻿@using WebApp1.Common
+@model IEnumerable<WebApp1.Models.Product>
 
 @{
     ViewBag.Title = "Index";
@@ -58,7 +59,7 @@
     <tr>
         <td>
             @*@Html.DisplayFor(modelItem => item.FeatureImage)*@
-            <img src="@Server.UrlDecode(item.FeatureImage)" class="thumbnail product-image-thumb"/>
+            <img src="@item.FeatureImage.ToProductImageUrl()" class="thumbnail product-image-thumb"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Category.Category_Name)

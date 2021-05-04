@@ -1,4 +1,5 @@
-﻿@model WebApp1.Models.Product
+﻿@using WebApp1.Common
+@model WebApp1.Models.Product
 
 @{
     ViewBag.Title = "Delete";
@@ -49,7 +50,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.FeatureImage)" class="thumbnail product-image-thumb" />
+            <img src="@Model.FeatureImage.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -57,7 +58,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.DtImage)" class="thumbnail product-image-thumb" />
+            <img src="@Model.DtImage.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -65,7 +66,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.Imglink1)" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink1.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -74,7 +75,7 @@
 
         <dd>
             @*@Html.DisplayFor(model => model.Imglink2)*@
-            <img src="@Server.UrlDecode(Model.Imglink2)" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink2.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -82,7 +83,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.Imglink3)" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink3.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -90,7 +91,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.Imglink4)" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink4.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>
@@ -98,7 +99,7 @@
         </dt>
 
         <dd>
-            <img src="@Server.UrlDecode(Model.Imglink5)" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink5.ToProductImageUrl()" class="thumbnail product-image-thumb" />
         </dd>
 
         <dt>

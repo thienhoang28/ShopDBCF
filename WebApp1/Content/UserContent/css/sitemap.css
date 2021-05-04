@@ -1,0 +1,22 @@
+body{
+	background-color: white;
+}
+
+.sitemap {
+	text-align: center;
+	align-items: center;
+	padding:20px auto;
+}
+.sitemap h2{
+	font-size: 3rem;
+	color: red;
+
+
+}
+footer{
+	background-color: rgba(232,232,232,0.3);
+}
+/*.sitemap img{
+	padding:20px auto;
+}
+*/

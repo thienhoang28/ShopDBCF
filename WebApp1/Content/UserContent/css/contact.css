@@ -1,0 +1,191 @@
+body {
+	width: 100%;
+	height: 100%;
+	font-family: Century Gothic, Arial, sans-serif;
+	color:#222;
+	background-color: #FFFAF0;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#contact-section {
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url('../images/carousel4.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 2%;
+}
+
+/*.showrooms{
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url('../images/gallery1.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 2%;
+
+}*/
+
+#contact-section .container h2 {
+	text-align: center;
+	text-decoration: none;
+	text-underline-position: under;
+	color: rgb(238,235,235);
+	letter-spacing: 2px;
+	/*padding-top: 10px;*/
+	margin-top: 20px;
+}
+
+#contact-section .container p {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 3%;
+	color: #fff;
+	letter-spacing: 3px;
+
+}
+
+.contact-form .icon-form {
+	left: 30px;
+}
+
+.contact-form .icon-form .icons {
+	font-size: 30px;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	background-color: none;
+	margin: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid rgb(190,190,190);
+	color: rgb(190,190,190);
+	vertical-align: middle;
+
+}
+
+.contact-form .icon-form .icons:hover {
+	cursor: pointer;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.contact-form {
+	display: grid;
+	grid-template-columns: auto auto;
+
+}
+
+.icon-form .form-info {
+	font-size: 16px;
+	font-style: italic;
+	color: #fff;
+	letter-spacing: 2px;
+	vertical-align: middle;
+	padding: 5px;
+	margin-bottom: 10px;
+
+	/*display: block;*/
+}
+
+.icon-form a{
+	text-decoration: none;
+}
+
+#form input {
+	padding: 10px;
+	margin: 10px;
+	width: 70%;
+	background-color: rgba(136,133,133,0.5);
+	color: #fff;
+	border: none;
+	outline: none;
+
+}
+
+#form input::placeholder {
+	color: #fff;
+}
+
+#form textarea {
+	padding: 10px;
+	margin: 10px;
+	width: 70%;
+	background-color: rgba(136,133,133,0.5);
+	color: #fff;
+	border: none;
+	outline: none;
+}
+
+#form textarea::placeholder {
+	color: #fff;
+}
+
+.submit {
+	width: 40%;
+	background: none;
+	padding: 4px;
+	outline: none;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 33px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 3%;
+	border: 2px solid rgb(190,190,190);
+	color: rgb(190,190,190);
+	margin-bottom: 30px;
+}
+
+.submit:hover {
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+
+}
+
+
+@media (max-width: 768px){
+	#contact-section .contact-form {
+		display: block;
+		width: 100%;
+		text-align: center;
+
+	}
+
+	.icon-form {
+		text-align: left;
+		display: block;
+		padding: 5px;
+		margin-left: 60px;
+
+	}
+
+	#contact-section .submit {
+		width: 60%;
+	}
+}
+
+.wehave{
+	color: white;
+}
+.list-group a{
+	background-color:#173250 ;
+	color: white;
+}
+
+.showrooms{
+	background-image: url('../images/map-1.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	min-height: 534px;
+	padding-bottom: 2%;
+}

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<WebApp1.Models.ViewModels.CartItem>
+﻿@using WebApp1.Common
+@model IEnumerable<WebApp1.Models.ViewModels.CartItem>
 
 @{
     ViewBag.Title = "Shopping Cart";
@@ -44,7 +45,7 @@
 
                         <tr>
                             <td>
-                                <img class="img-thumbnail product-image-thumb" style="max-width:100px; max-height:100px;" src="@Server.UrlDecode(item.ImageUrl)" />
+                                <img src="@item.ImageUrl.ToProductImageUrl()" class="img-thumbnail product-image-thumb" style="max-width:100px; max-height:100px;" />
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.ProductName)

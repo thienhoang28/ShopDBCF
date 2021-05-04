@@ -1,4 +1,5 @@
-﻿@model WebApp1.Models.Product
+﻿@using WebApp1.Common
+@model WebApp1.Models.Product
 
 @{
     ViewBag.Title = "Details";
@@ -24,7 +25,7 @@
                         @*<a href="#" class="btn btn-danger mt-1">Compare</a>*@
             </div>
             <div class="col-7 col-md-8 my-auto">
-                <img src="@Server.UrlDecode(Model.DtImage)" class="w-100">
+                <img src="@Model.DtImage.ToProductImageUrl()" class="w-100">
             </div>
         </div>
         <div class="container-fluid mt-4">
@@ -36,7 +37,7 @@
             <hr>
             <div class="row">
                 <div class="col-5 my-auto">
-                    <img src="@Server.UrlDecode(Model.Imglink1)" alt="" class="w-100 ">
+                    <img src="@Model.Imglink1.ToProductImageUrl()" alt="" class="w-100 ">
                 </div>
                 <div class="cap1 col-7 pt-3">
                     <h4>Exterior</h4>
@@ -47,18 +48,18 @@
             </div>
             <div class="row mt-2">
                 <div class="gla col-6 ">
-                    <img src="@Server.UrlDecode(Model.Imglink2)" class="w-100">
+                    <img src="@Model.Imglink2.ToProductImageUrl()" class="w-100">
                 </div>
                 <div class="gla col-6 ">
-                    <img src="@Server.UrlDecode(Model.Imglink3)" class="w-100">
+                    <img src="@Model.Imglink3.ToProductImageUrl()" class="w-100">
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="gla col-6 ">
-                    <img src="@Server.UrlDecode(Model.Imglink4)" class="w-100">
+                    <img src="@Model.Imglink4.ToProductImageUrl()" class="w-100">
                 </div>
                 <div class="gla col-6 ">
-                    <img src="@Server.UrlDecode(Model.Imglink5)" class="w-100">
+                    <img src="@Model.Imglink5.ToProductImageUrl()" class="w-100">
                 </div>
             </div>
 

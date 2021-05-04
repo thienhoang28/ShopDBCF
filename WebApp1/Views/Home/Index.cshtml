@@ -1,4 +1,5 @@
-﻿@model List<WebApp1.Models.Product>
+﻿@using WebApp1.Common
+@model List<WebApp1.Models.Product>
 
 @{
     ViewBag.Title = "Home Page";
@@ -29,7 +30,7 @@
                 <div class="col-12 col-sm-6 col-lg-3 product-grid1 mt-3 p-0">
                     <div class="image p-0">
                         <div class="im1 my-auto">
-                            <img src="@Server.UrlDecode(Model[i].FeatureImage)" alt="" class="w-100">
+                            <img src="@Model[i].FeatureImage.ToProductImageUrl()" alt="" class="w-100">
                         </div>
                         <h4 class="text-center">@Model[i].Name</h4>
                         <h5 class="text-center">$@Model[i].Prices.First().Value</h5>

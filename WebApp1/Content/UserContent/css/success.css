@@ -1,0 +1,95 @@
+/*#successp {
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url('images/carousel4.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 2%;
+}*/
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: Century Gothic, Arial, sans-serif;
+	color:#222;
+	margin:0;
+}
+
+#successp {
+	background-image: linear-gradient(rgba(73,102,144,0.1),rgba(73,102,144,0.2)), url('../images/form-cover-1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+#content{
+	/*min-height: 600px;*/
+	width: 100%;
+}
+.link a:hover{
+	color:white;
+}
+
+#successp .text h1 {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 3rem;
+	color: white;
+	font-weight: bolder;
+	text-shadow: 4px 4px 10px #000;
+}
+
+@media (max-width: 3000px){
+	#successp .text h1{
+		font-size: 3.5rem;
+	}
+	#content {
+	min-height: 1000px;
+}
+
+@media (max-width: 1920px){
+	#successp .text h1{
+		font-size: 3.5rem;
+	}
+	#content {
+	min-height: 800px;
+}
+
+
+@media (max-width: 1200px){
+	#successp .text h1{
+		font-size: 3.5rem;
+	}
+	#content {
+	min-height: 600px;
+}
+	
+}
+@media (max-width: 992px){
+	#successp .text h1{
+		font-size: 3.5rem;
+	}
+	#content {
+	min-height: 500px;
+}
+	
+}
+@media (max-width: 768px){
+	#successp .text h1{
+		font-size: 2.8rem;
+	}
+	#content {
+	min-height: 400px;
+}
+
+	
+}
+@media (max-width: 576px){
+	#successp .text h1{
+		font-size: 2.3rem;
+	}
+	#content {
+	min-height: 300px;
+}
+	
+}

@@ -1,4 +1,5 @@
 ﻿@*@model WebApp1.Models.Product*@
+@using WebApp1.Common
 @model WebApp1.Models.ViewModels.ProductView
 
 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -58,7 +59,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.FeatureImage))
         {
-            <img src="@Server.UrlDecode( Model.FeatureImage)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.FeatureImage.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -72,7 +73,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.DtImage))
         {
-            <img src="@Server.UrlDecode( Model.DtImage)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.DtImage.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -86,7 +87,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.Imglink1))
         {
-            <img src="@Server.UrlDecode( Model.Imglink1)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink1.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -100,7 +101,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.Imglink2))
         {
-            <img src="@Server.UrlDecode( Model.Imglink2)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink2.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -114,7 +115,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.Imglink3))
         {
-            <img src="@Server.UrlDecode( Model.Imglink3)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink3.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -128,7 +129,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.Imglink4))
         {
-            <img src="@Server.UrlDecode( Model.Imglink4)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink4.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>
@@ -142,7 +143,7 @@
     <div class="col-md-4">
         @if (!string.IsNullOrEmpty(Model?.Imglink5))
         {
-            <img src="@Server.UrlDecode( Model.Imglink5)" alt="@Model.Name" class="thumbnail product-image-thumb" />
+            <img src="@Model.Imglink5.ToProductImageUrl()" alt="@Model.Name" class="thumbnail product-image-thumb" />
         }
     </div>
 </div>

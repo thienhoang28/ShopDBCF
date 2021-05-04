@@ -1,0 +1,396 @@
+body{
+	width: 100%;
+	height: 100%;
+	font-family: Century Gothic, Arial, sans-serif;
+	font-size: 16px;
+	color:#222;
+	background-color: rgba(232,232,232,0.3);
+}
+
+/*---header---*/
+.navbar{
+	background-color: white!important;
+	font-size: 1.25rem;
+}
+.navbar li a{
+	color:black!important;
+}
+.navbar li a:hover{
+	color:#B6292B!important;
+}
+#auto{
+	color: #f70000;
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+#world{
+	color: #938e93;
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+/*---/header---*/
+/*--carousel--*/
+#slides{
+	width:100%;
+}
+.tt1 h1{
+	font-size: 2.2rem;
+}
+#caption{
+	color:black!important;
+	font-size: 30px;
+}
+.carousel-inner img{
+	width:100%;
+}
+
+.carousel-caption{
+	position: absolute;
+	/*width: 32%;
+	bottom:0%;*/
+	top: 0%;
+	/*left: 5%;*/
+	/*background-color:rgba(255,255,255,.75);
+	color: black;*/
+}
+.slogan{
+	font-size: 2.3rem;
+	color: 	#ffdd00;
+	text-shadow: 4px 4px 10px #000 !important;
+	/*font-weight: bold;*/
+	/*font-family: 'Garamond', sans-serif;*/
+}
+.carousel-caption h1{
+	font-size: 3.6rem;
+	text-shadow: 3px 3px 10px #000;
+}
+.carousel-caption p{
+	/*font-size: 1.2rem;*/
+	
+}
+
+.carousel-caption hr{
+	width:90%;
+}
+/*--/carousel--*/
+/*--jumbotron--*/
+.jumbotront {
+	background: linear-gradient(rgba(250,206,156,0.2),
+	rgba(250,206,156,0.4)),url(../images/background12.jpg);
+	/*height: 300px;*/
+	width: 100%;
+	padding-top: 40px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	/*border:none;*/
+  	border-radius: 0;
+}
+.jumbotront h1{
+	/*font-size: 2rem;*/
+	font-family: Helvetica;
+	color:white;
+	text-shadow: 3px 3px 10px #000;
+}
+.jumbotront .sha{
+	font-size: 1.2rem;
+	color:white;
+	text-shadow: 3px 3px 10px #000;
+
+}
+.cover{
+	width:100%;
+	min-height: 400px;
+}
+/*--/jumbotron--*/
+
+/*--list product--*/
+.image{
+	text-align: center;
+	background-color:#fff;
+	margin: 7px;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.19); 
+}
+.image:hover{
+	background-color:rgba(130,130,130,.4);
+}
+.image img{
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	transform: scale(0.95);
+	margin-top: 10px;
+}
+.image img:hover{
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+.image h4{
+	font-size: 1.2rem;
+}
+.image h5{
+	font-size: 0.9rem;
+}
+.product-grid2 img{
+	max-width: 340px;
+}
+.product-grid1 img{
+	max-width: 340px;
+}
+.im1{
+	/*min-height: 170px;*/
+	line-height: 170px;
+}
+.im2{
+	min-height: 220px;
+}
+.buy{
+	/*padding: 5px 40px;*/
+	/*display: block;*/
+	font-size: 1rem;
+	text-align: center;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	background-color: rgba(0,0,0,0.9);
+	border:none;
+
+
+}
+.buy:hover{
+
+}
+/*gallery*/
+.gla img{
+	box-shadow: 0 0 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);
+}
+.gla{
+	padding:13px;
+}
+/*.closebtn {
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}*/
+/*/gallery*/
+/*--list service--*/
+.image-service img {
+	height: 100%;
+	margin:0 auto;
+}
+.image-service p{
+	font-size: 1rem;
+	text-align: justify;
+}
+/*--/list service--*/
+/*--list service--*/
+.image-loan img {
+	width: 40%;
+	margin:0 auto;
+}
+.image-loan p{
+	font-size: 1rem;
+	text-align: justify;
+}
+.loan{
+	background-color: rgba(255,215,0,0.3) !important;
+}
+/*--/list service--*/
+/*--loan--*/
+.image-loan img{
+	max-width: 181px;
+}
+/*--/loan--*/
+
+/*--contact--*/
+#contact {
+	width: 100%;
+	/*margin-top: 20px;*/
+	background-color: #ffefd7;
+
+}
+
+#contact h2 {
+	text-transform: uppercase;
+/*	letter-spacing: 10px;*/
+/*	border-bottom: 1px solid black;*/
+	margin-bottom: 20px;
+}
+
+#contact .content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#contact form {
+	flex: 1;
+	min-width: 300px;
+	padding: 30px 15px;
+
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #555;
+	margin: 15px 0;
+	resize: none;
+	font-size: 14px;
+}
+
+#contact .map {
+	min-width: 300px;
+	flex: 1;
+	padding: 30px 15px;
+}
+
+#contact .map iframe {
+	width: 100%;
+
+}
+
+#contact form button {
+	background-color: rgba(0,0,0,0.8);
+	height: 40px;
+	color: white;
+	letter-spacing: 4px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+/*--/contact--*/
+
+
+
+
+/*----footer---*/
+footer {
+    background-color: white;
+}
+
+.inf a{
+	color:black;
+	text-decoration: none;
+	font-size: 1rem;
+}
+.inf a:hover{
+	color: #B6292B;
+}
+.inf p{
+	margin-bottom: 0px;
+	font-size: 1rem;
+}
+.inf .input-group-append a:hover{
+	color: white;
+}
+#privacy{
+	background-color: black;
+	font-size: 1rem;
+}
+#privacy a{
+	color: hsla(0,0%,100%,.7);
+	text-decoration: none;
+}
+#privacy a:hover{
+	color:white;
+	text-decoration: none;
+}
+
+.welcome hr{
+	border-top: 2px solid rgba(62,44,100,0.6);
+	width: 95%;
+	margin-bottom: 2rem;
+}
+.social-media{
+	background-color: #DCDCDC;
+}
+.social a {
+	font-size: 2em;/*1em = 16px*/
+	padding: 2rem;/*1rem = 1 "font-size" */
+}
+
+.social1 a {
+	font-size: 2em;/*1em = 16px*/
+	padding: 0.5rem;/*1rem = 1 "font-size" */
+}
+.fa-facebook {
+	color: #3b5998;
+}
+.fa-twitter {
+	color: #00aced;	
+}
+.fa-google-plus-g {
+	color: #dd4b39;
+}
+.fa-instagram {
+	color: #517fa4;
+}
+.fa-youtube {
+	color: #bb0000;
+}
+#send {
+	border: none;
+	border-radius: 2px;
+	font-size: 1rem;
+}
+/*----/footer---*/
+@media (max-width: 1920px){
+	.im2{
+	min-height: 290px;
+}
+	
+}
+
+@media (max-width: 1280px){
+	.im2{
+	min-height: 250px;
+}
+	
+}
+
+@media (max-width: 992px){
+	html{
+		font-size: 13px;
+	}
+	.navbar a img{
+		height:49px;
+	} 
+	.slogan{
+		font-size: 2.1rem;
+	}
+	.carousel-caption h1{
+		font-size: 3.125rem;
+	}
+}
+
+@media (max-width: 870px){
+	.cover{
+		min-height: 300px;
+	}
+}
+
+@media (max-width: 768px){
+	.cover{
+		min-height: 300px;
+	}
+}
+@media (max-width: 768px){
+	.cover{
+		min-height: 300px;
+	}
+}
+
+@media (max-width: 576px){
+	.cover{
+		min-height: 240px;
+	}
+}
